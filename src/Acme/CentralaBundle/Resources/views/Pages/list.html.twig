@@ -1,0 +1,44 @@
+{% extends 'AcmeCentralaBundle::base.html.twig' %}
+
+{% block body %}
+    <p><b>Search results for: {{criteria}}</b></p>
+   {% set n = 1 %}
+  
+   <form id="delete" action="{{ path('acme_centrala_delete') }}" method="post">
+       
+   {% for item in veze %}
+       <div class="vcard"> 
+           <p><b>{{n}}.</b></p>
+       {%set e= item %}
+     
+       {%set n= n+1 %}
+       {%set x= true %}
+       {% for item in e %}
+           {% if x== true %}
+               <div class="vlasnik">
+            <p><b>Owner:</b>{{item.veze.vlasnik}} </p> 
+            <p><b>Visibility:</b>{{item.veze.vidljivost}} </p> 
+          
+            
+            <p><input type="checkbox" name="box[]" value="{{item.veze.idveza}}"></p>
+               </div>
+             {%set x= false %}
+          
+           {% endif %}
+           {% endfor %}
+  <table><tr><th>Vrsta polja</th><th>Podnaziv</th><th>Podnaziv 2</th><th>Sadrzaj polja</th></tr>
+       {% for item in e %}
+        <tr><td>{{item.vrstapolja}}</td>
+            <td>{{item.podnaziv}} </td>
+            <td>{{item.podnaziv2}} </td> 
+            <td>{{item.sadrzajpolja}} </td> </tr>
+            
+         
+           {% endfor %}
+          </table>
+           </div>
+       {% endfor %}
+        
+</form>
+       
+{% endblock %}

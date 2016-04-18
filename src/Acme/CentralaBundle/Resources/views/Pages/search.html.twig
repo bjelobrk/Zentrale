@@ -1,0 +1,12 @@
+{% extends 'AcmeCentralaBundle::base.html.twig' %}
+
+{% block body %}
+  <form id="searchform" action="{{ path('acme_centrala_search') }}" method="post" >
+      <p>{{error}}</p>
+  <label>Contacts search </label>
+  <input id="search_query" type="text" name="criteria" autocomplete="off"><br>
+  <input id="button_find" name = "submit" type="submit" value="Submit">
+  <div id="display_results"></div>
+  
+  </form>
+{% endblock %}

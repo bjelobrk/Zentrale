@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <title>Centrala</title>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% block stylesheets %}
+            
+            <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
+            <script type="text/javascript" src="{{ asset('js/insert.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/delete.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/search.js') }}"></script>
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('worker.ico') }}" />
+    </head>
+    <body>
+        <div class="top">
+  <ul>
+        <li><a href="{{ path('acme_centrala_homepage') }}">Home</a></li>
+        <li><a href="{{ path('acme_centrala_upload') }}">Upload</a></li>
+        <li><a href="{{ path('acme_centrala_insertforma') }}">Insert</a></li>
+        <li><a href="{{ path('acme_centrala_list') }}">List</a></li>
+        <li><a href="{{ path('acme_centrala_searchform') }}">Search</a><button class="delete" name="submit">delete</button><button class="export" name="submit">export</button></li>
+        
+    </ul>
+        </div>
+    <div class="center">
+     {% block body %}{% endblock %}
+    </div>
+</body> 
+</html>

@@ -1,0 +1,43 @@
+{% extends 'AcmeCentralaBundle::base.html.twig' %}
+
+{% block body %}
+{{ form_start(form) }}
+
+{{ form_errors(form) }}
+<div>
+
+{{ form_label(form.vlasnik) }}
+
+{{ form_errors(form.vlasnik) }}
+
+{{ form_widget(form.vlasnik) }} 
+
+</div>
+<div>
+
+{{ form_label(form.vidljivost) }}
+
+{{ form_errors(form.vidljivost) }}
+
+{{ form_widget(form.vidljivost) }} 
+
+</div>
+<div>
+
+{{ form_label(form.cardFile) }}
+
+{{ form_errors(form.cardFile) }}
+
+{{ form_widget(form.cardFile) }} 
+
+</div>
+
+
+<div>
+
+{{ form_widget(form.save) }}
+
+</div>
+
+{{ form_end(form) }}
+{% endblock %}

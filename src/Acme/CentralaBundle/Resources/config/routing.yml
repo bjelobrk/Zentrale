@@ -1,0 +1,60 @@
+acme_centrala_homepage:
+    pattern:  /
+    defaults: { _controller: AcmeCentralaBundle:Glavni:index }
+    requirements:
+        _method:  GET|POST 
+acme_centrala_insert:
+    pattern:  /insert
+    defaults: { _controller: AcmeCentralaBundle:Glavni:insert }
+    requirements:
+        _method:  GET|POST 
+    
+acme_centrala_insertforma:
+    pattern:  /insertforma
+    defaults: { _controller: AcmeCentralaBundle:Glavni:insertforma }
+    requirements:
+        _method:  GET|POST  
+acme_centrala_upload:
+    pattern:  /upload
+    defaults: { _controller: AcmeCentralaBundle:Glavni:upload }
+    requirements:
+        _method:  GET|POST 
+acme_centrala_export:
+    pattern:  /export
+    defaults: { _controller: AcmeCentralaBundle:Glavni:export }
+    requirements:
+        
+        _method:  GET|POST     
+       
+acme_centrala_list:
+    pattern:   /list
+    defaults: { _controller: AcmeCentralaBundle:Glavni:list }
+    requirements:
+        _method:  GET|POST    
+acme_centrala_searchform:
+    pattern:   /searchform
+    defaults: { _controller: AcmeCentralaBundle:Glavni:searchform }
+    requirements:
+        _method:  GET|POST 
+acme_centrala_search:
+    pattern:   /search
+    defaults: { _controller: AcmeCentralaBundle:Glavni:search }
+    requirements:
+        _method:  GET|POST   
+acme_centrala_delete:
+    pattern:   /delete
+    defaults: { _controller: AcmeCentralaBundle:Glavni:delete }
+    requirements:
+        
+        _method:  GET|POST  
+acme_centrala_ajax:
+    pattern:   /ajax
+    defaults: { _controller: AcmeCentralaBundle:Glavni:ajax }
+    requirements:
+        
+        _method:  GET|POST  
+acme_centrala_search1:
+    pattern:   /{criteria}/search1
+    defaults: { _controller: AcmeCentralaBundle:Glavni:search1 }
+    requirements:
+        _method:  GET|POST 

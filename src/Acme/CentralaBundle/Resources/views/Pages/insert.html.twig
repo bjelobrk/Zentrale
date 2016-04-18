@@ -1,0 +1,54 @@
+
+{% block body %}
+{{ form_start(form) }}
+
+{{ form_errors(form) }}
+ {#
+<div>
+
+{{ form_label(form.vrsta_polja) }}
+
+{{ form_errors(form.vrsta_polja) }}
+
+{{ form_widget(form.vrsta_polja) }} 
+
+</div>
+
+
+<div>
+
+{{ form_label(form.podnaziv) }}
+
+{{ form_errors(form.podnaziv) }}
+
+{{ form_widget(form.podnaziv) }}
+
+</div>
+<div>
+
+{{ form_label(form.podnaziv2) }}
+
+{{ form_errors(form.podnaziv2) }}
+
+{{ form_widget(form.podnaziv2) }}
+
+</div>
+#}
+<div>
+
+{{ form_label(form.sadrzaj_polja) }}
+
+{{ form_errors(form.sadrzaj_polja) }}
+
+{{ form_widget(form.sadrzaj_polja) }}
+
+</div>
+
+<div>
+
+{{ form_widget(form.save) }}
+
+</div>
+
+{{ form_end(form) }}
+{% endblock %}

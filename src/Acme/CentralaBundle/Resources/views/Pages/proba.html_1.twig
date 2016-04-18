@@ -1,0 +1,67 @@
+{% extends 'AcmeCentralaBundle::base.html.twig' %}
+
+{% block body %}
+<form action="{{ path('acme_centrala_insert') }}" method="post" >
+    <label>Vlasnik kontakta </label>
+    <input type="text" name="vlasnik"><br>
+    <label>Vidljivost: </label>
+    <select name="vidljivost">
+        <option value="Public">Public</option>
+        <option value="Private">Private</option>
+    </select><br>
+    <label>Ime </label><br>
+    <input type="text" name="ime" placeholder="Ime"><br>
+    <label>Prezime </label><br>
+    <input type="text" name="prezime" placeholder="Prezime"><br>
+     <label>Company </label><br>
+    <input type="text" name="company" placeholder="Company"><br>
+    <label>Title </label><br>
+    <input type="text" name="title" placeholder="Title"><br>
+       <label>PHONE </label><br>
+    <input type="text" name="tel[]" placeholder="Phone">
+    <select class="podnaziv" name="podnaziv[]">
+        <option value="MOBILE">MOBILE</option>
+            <option value="WORK">WORK</option>
+              <option value="HOME">HOME</option>
+                <option value="WORK_FAX">WORK FAX</option>
+                  <option value="HOME_FAX">HOME FAX</option>
+                    <option value="OTHER">OTHER</option>
+                      <option value="CUSTOM">CUSTOM</option>
+    </select>
+    <div class="telefoni"></div>
+    <button class="dugme">Add new</button><br>
+     <label>EMAIL </label><br>
+    <input type="text" name="email[]" placeholder="Email">
+    <select class="podnazive" name="podnazive[]">
+         <option value="HOME">HOME</option>
+            <option value="WORK">WORK</option>
+                <option value="OTHER">OTHER</option>
+                    <option value="CUSTOM">CUSTOM</option>
+    </select>
+    <div class="mejlovi"></div>
+    <button class="dugme2">Add new</button><br>
+   
+    <label>ADDRESS </label><br>
+    <input type="text" name="address[]" placeholder="Address">
+    <select class="podnaziva" name="podnaziva[]">
+         <option value="HOME">HOME</option>
+            <option value="WORK">WORK</option>
+                <option value="OTHER">OTHER</option>
+                    <option value="CUSTOM">CUSTOM</option>
+    </select>
+    <div class="adrese"></div>
+    <button class="dugme3">Add new</button><br>
+    
+     <label>SPECIAL DATES </label><br>
+    <input type="text" name="dates[]" placeholder="Date">
+    <select class="podnazivs" name="podnazivd[]">
+         <option value="BIRTHDAY">BIRTHDAY</option>
+            <option value="ANNIVERSARY">ANNIVERSARY</option>
+                <option value="OTHER">OTHER</option>
+                    <option value="CUSTOM">CUSTOM</option>
+    </select>
+    <div class="dates"></div>
+    <button class="dugme4">Add new</button><br>
+    <input name = "submit" type="submit" value="Submit">
+ </form>
+{% endblock %}

@@ -1,0 +1,7 @@
+parameters:
+#    acme_centrala.example.class: Acme\CentralaBundle\Example
+
+services:
+#    acme_centrala.example:
+#        class: %acme_centrala.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
